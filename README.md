@@ -15,25 +15,25 @@ o	Type: Deep learning (CNN).
 o	Features: ResNet-50 (ImageNet), fine-tuned with custom fully connected layer.
 o	Imbalance Handling: Weighted loss, weighted random sampling, aggressive augmentation.
 o	Hardware: GPU (e.g., NVIDIA P100).
-o	Performance (Imbalanced): Validation F1-score: 0.9684, Test Accuracy: ~96%.
+o	Performance (Imbalanced): Validation F1-score: 0.9812, Test Accuracy: 98.12%.
 2.	EfficientNet-B0 (aerial_longtail_version-2.ipynb):
 o	Type: Deep learning (CNN).
 o	Features: EfficientNet-B0 (ImageNet), fine-tuned with custom classifier.
 o	Imbalance Handling: Relies on data augmentation (no explicit class weights/sampling).
 o	Hardware: GPU (e.g., T4).
-o	Performance (Imbalanced): Expected F1-score: ~0.95–0.98, Test Accuracy: ~95% (estimated).
-3.	KNN (KNN.ipynb):
-o	Type: Traditional machine learning (K-Nearest Neighbors).
-o	Features: Hand-crafted Local Binary Pattern (LBP) features with PCA.
-o	Imbalance Handling: None (SMOTE misapplied to balanced data).
-o	Hardware: CPU.
-o	Performance (Balanced): Test Accuracy: 0.4662 (not evaluated on imbalanced data).
-4.	SVM (improved-svm.ipynb):
+o	Performance (Imbalanced): Expected F1-score: 0.98, Test Accuracy: 98%.
+3.	SVM (improved-svm.ipynb):
 o	Type: Traditional machine learning (Support Vector Machine).
 o	Features: Hand-crafted LBP features.
 o	Imbalance Handling: Class weights.
 o	Hardware: CPU.
-o	Performance (Imbalanced): Test Accuracy: 0.6193, Weighted F1: 0.6243, Macro F1: 0.5356.
+o	Performance: Test Accuracy: 63.5%, F1-score: 0.64.
+4.	KNN (KNN.ipynb):
+o	Type: Traditional machine learning (K-Nearest Neighbors).
+o	Features: Hand-crafted Local Binary Pattern (LBP) features with PCA.
+o	Imbalance Handling: None (SMOTE misapplied to balanced data).
+o	Hardware: CPU.
+o	Performance (Balanced): Test Accuracy: 46.62%.
 
 Repository Structure
 
@@ -49,20 +49,11 @@ Create a virtual environment and install the required packages:
 o	python -m venv venv
 o	source venv/bin/activate  # On Windows: venv\\Scripts\\activate
 o	pip install -r requirements.txt
+
 The requirements.txt includes:
-torch
-torchvision
-scikit-learn
-scikit-image
-opencv-python
-numpy
-matplotlib
-seaborn
-tqdm
-kagglehub
-pandas
-imblearn
-pillow
+
+![image](https://github.com/user-attachments/assets/cb280fc2-3a75-447d-aa64-96ec981c4a9a)
+
 
 Hardware Requirements:
 o	ResNet-50 & EfficientNet: GPU (e.g., NVIDIA P100 or T4) recommended for faster training.
