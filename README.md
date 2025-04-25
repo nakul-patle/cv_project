@@ -38,16 +38,9 @@ o	Imbalance Handling: Class weights.
 o	Hardware: CPU.
 o	Performance (Imbalanced): Test Accuracy: 0.6193, Weighted F1: 0.6243, Macro F1: 0.5356.
 Repository Structure
-skyview-classification/
-│
-├── notebooks/
-│   ├── resnet-final.ipynb          # ResNet-50 implementation
-│   ├── aerial_longtail_version-2.ipynb  # EfficientNet-B0 implementation
-│   ├── KNN.ipynb                   # KNN implementation
-│   ├── improved-svm.ipynb          # SVM implementation
-│
-├── README.md                      # This file
-├── requirements.txt               # Python dependencies
+![image](https://github.com/user-attachments/assets/8d683e45-e17b-4aee-a7a5-0b48bf299c15)
+
+
 Installation
 1.	Clone the Repository:
 git clone https://github.com/<your-username>/skyview-classification.git
