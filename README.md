@@ -1,17 +1,14 @@
 # SkyView Aerial Landscape Classification
 
 This repository contains implementations of four machine learning models for classifying aerial landscape images from the SkyView: An Aerial Landscape Dataset. The models include two deep learning approaches (ResNet-50 and EfficientNet-B0) and two traditional machine learning approaches (K-Nearest Neighbors (KNN) and Support Vector Machine (SVM)). The project evaluates these models on both balanced and imbalanced (long-tail) versions of the dataset.
-Table of Contents
-•	Dataset
-•	Models
-•	Repository Structure
-•	Installation
-•	Usage
-•	Results
-•	Contributing
+
+![image](https://github.com/user-attachments/assets/596cb577-4efd-4079-8636-9b1a8c8d55a1)
+
 Dataset
 The SkyView: An Aerial Landscape Dataset (available on Kaggle) contains 12,000 aerial images across 15 classes: Agriculture, Airport, Beach, City, Desert, Forest, Grassland, Highway, Lake, Mountain, Parking, Port, Railway, Residential, and River. Each class has 800 images in the balanced setting. For the imbalanced (long-tail) setting, class counts range from 800 to 50 images 
+
 •	Balanced Dataset: 12,000 images (800 per class).
+
 Four models are implemented to classify the SkyView dataset:
 1.	ResNet-50 (resnet-final.ipynb):
 o	Type: Deep learning (CNN).
