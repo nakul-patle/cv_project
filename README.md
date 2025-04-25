@@ -5,35 +5,120 @@ This repository contains implementations of four machine learning models for cla
 ![image](https://github.com/user-attachments/assets/596cb577-4efd-4079-8636-9b1a8c8d55a1)
 
 Dataset
-The SkyView: An Aerial Landscape Dataset (available on Kaggle) contains 12,000 aerial images across 15 classes: Agriculture, Airport, Beach, City, Desert, Forest, Grassland, Highway, Lake, Mountain, Parking, Port, Railway, Residential, and River. Each class has 800 images in the balanced setting. For the imbalanced (long-tail) setting, class counts range from 800 to 50 images 
+
+The dataset contains 12,000 aerial images across 15 classes: Agriculture, Airport, Beach, City, Desert, Forest, Grassland, Highway, Lake, Mountain, Parking, Port, Railway, Residential, and River. Each class has 800 images in the balanced setting. For the imbalanced (long-tail) setting, class counts range from 800 to 50 images 
 
 •	Balanced Dataset: 12,000 images (800 per class).
 
+Models
+
 Four models are implemented to classify the SkyView dataset:
-1.	ResNet-50 (resnet-final.ipynb):
-o	Type: Deep learning (CNN).
-o	Features: ResNet-50 (ImageNet), fine-tuned with custom fully connected layer.
-o	Imbalance Handling: Weighted loss, weighted random sampling, aggressive augmentation.
-o	Hardware: GPU (e.g., NVIDIA P100).
-o	Performance (Imbalanced): Validation F1-score: 0.9812, Test Accuracy: 98.12%.
-2.	EfficientNet-B0 (aerial_longtail_version-2.ipynb):
-o	Type: Deep learning (CNN).
-o	Features: EfficientNet-B0 (ImageNet), fine-tuned with custom classifier.
-o	Imbalance Handling: Relies on data augmentation (no explicit class weights/sampling).
-o	Hardware: GPU (e.g., T4).
-o	Performance (Imbalanced): Expected F1-score: 0.98, Test Accuracy: 98%.
-3.	SVM (improved-svm.ipynb):
-o	Type: Traditional machine learning (Support Vector Machine).
-o	Features: Hand-crafted LBP features.
-o	Imbalance Handling: Class weights.
-o	Hardware: CPU.
-o	Performance: Test Accuracy: 63.5%, F1-score: 0.64.
-4.	KNN (KNN.ipynb):
-o	Type: Traditional machine learning (K-Nearest Neighbors).
-o	Features: Hand-crafted Local Binary Pattern (LBP) features with PCA.
-o	Imbalance Handling: None (SMOTE misapplied to balanced data).
-o	Hardware: CPU.
-o	Performance (Balanced): Test Accuracy: 46.62%.
+
+
+
+
+
+ResNet-50 (resnet-final.ipynb):
+
+
+
+
+
+Type: Deep learning (CNN).
+
+
+
+Features: Pretrained ResNet-50 (ImageNet), fine-tuned with custom fully connected layer.
+
+
+
+Imbalance Handling: Weighted loss, weighted random sampling, aggressive augmentation.
+
+
+
+Hardware: GPU (e.g., NVIDIA P100).
+
+
+
+Performance (Imbalanced): Validation F1-score: 0.9684, Test Accuracy: ~96%.
+
+
+
+EfficientNet-B0 (aerial_longtail_version-2.ipynb):
+
+
+
+
+
+Type: Deep learning (CNN).
+
+
+
+Features: Pretrained EfficientNet-B0 (ImageNet), fine-tuned with custom classifier.
+
+
+
+Imbalance Handling: Relies on data augmentation (no explicit class weights/sampling).
+
+
+
+Hardware: GPU (e.g., T4).
+
+
+
+Performance (Imbalanced): Expected F1-score: ~0.95–0.98, Test Accuracy: ~95% (estimated).
+
+
+
+KNN (KNN.ipynb):
+
+
+
+
+
+Type: Traditional machine learning (K-Nearest Neighbors).
+
+
+
+Features: Hand-crafted Local Binary Pattern (LBP) features with PCA.
+
+
+
+Imbalance Handling: None (SMOTE misapplied to balanced data).
+
+
+
+Hardware: CPU.
+
+
+
+Performance (Balanced): Test Accuracy: 0.4662 (not evaluated on imbalanced data).
+
+
+
+SVM (improved-svm.ipynb):
+
+
+
+
+
+Type: Traditional machine learning (Support Vector Machine).
+
+
+
+Features: Hand-crafted LBP features.
+
+
+
+Imbalance Handling: Class weights.
+
+
+
+Hardware: CPU.
+
+
+
+Performance (Imbalanced): Test Accuracy: 0.6193, Weighted F1: 0.6243, Macro F1: 0.5356.
 
 Repository Structure
 
