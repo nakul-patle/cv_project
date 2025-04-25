@@ -102,19 +102,3 @@ The notebooks automatically download the SkyView dataset using kagglehub.dataset
 * **SVM**: Accuracy, weighted/macro F1-scores, classification report, confusion matrix.
 * Outputs (e.g., plots) are displayed inline or saved (e.g., knn_confusion_matrix.png).
 
-# Results
-
-* ResNet-50 outperforms others due to robust imbalance handling (weighted loss, sampling).
-* EfficientNet is efficient and likely comparable but may struggle with tail classes without class weights.
-* SVM performs moderately but fails on tail classes.
-* KNN is the least effective, with severe overfitting.
-
-# Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature`.
-3. Make changes and commit: `git commit -m "Add your feature"`.
-4. Push to your branch: `git push origin feature/your-feature`.
-5. Open a pull request with a detailed description.
